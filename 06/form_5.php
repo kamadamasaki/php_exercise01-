@@ -4,19 +4,17 @@ $err_msg = '';
 $num1 = '';
 $num2 = '';
 $num3 = '';
-$i1 = 0;
-$i2 = 0;
-$i3 = 0;
+$answer = 0;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $i1 = $_POST['num1'];
-    $i2 = $_POST['num2'];
-    $i3 = $_POST['num3'];
+    $num1 = $_POST['num1'];
+    $num2 = $_POST['num2'];
+    $num3 = $_POST['num3'];
 
-    if (empty($i1)||empty($i2)||empty($i3)) {
+    if (empty($num1) || empty($num2) || empty($num3)) {
         $err_msg = '全てに数字を入力してください';
-    }elseif (($i1) && ($i2) && ($i3)) {
-        $answer = $i1 + $i2 + $i3;
+    } else {
+        $answer = $num1 + $num2 + $num3;
     }
 }
 ?>
@@ -50,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <input type="submit" value="送信">
             </div>
         </div>
-        <?php if (($i1) && ($i2) && ($i3)) : ?>
+        <?php if (($num1) && ($num2) && ($num3)) : ?>
             <p><?= htmlspecialchars('合計値は' . $answer. 'です', ENT_QUOTES, 'UTF-8') ?></p>
         <?php endif; ?>
     </form>

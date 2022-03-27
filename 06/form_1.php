@@ -3,7 +3,7 @@
 $msg = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $msg = $_POST['message'];
+    $msg = $_POST['age'];
 }
 ?>
 
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <form action="" method="post">
         <div>
             <label for="">年齢</label><br>
-            <input type="text" name="message" id="">
+            <input type="text" name="age" id="">
             <div>
                 <input type="submit" value="送信">
             </div>

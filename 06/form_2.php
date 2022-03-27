@@ -10,7 +10,7 @@
     <form action="form_2_post.php" method="post">
         <div>
             <label for="">名前</label>
-            <input type="text" name="message" id="">
+            <input type="text" name="name" id="">
             <div>
                 <input type="submit" value="送信">
             </div>

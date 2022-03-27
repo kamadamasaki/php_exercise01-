@@ -1,11 +1,11 @@
 <?php
 
-$msg = '';
+$age = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $msg = $_POST['age'];
+    $age = $_POST['age'];
 
-    if (empty($msg)) {
+    if (empty($age)) {
         $err_msg = '年齢を入力してください';
     }
 }
@@ -31,14 +31,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <form action="" method="post">
         <div>
             <label for="">年齢</label><br>
-            <input type="text" name="age" id="" value="<?= $msg ?>">
+            <input type="text" name="age" id="" value="<?= $age ?>">
 
             <div>
                 <input type="submit" value="送信">
             </div>
         </div>
-        <?php if ($msg) : ?>
-            <p><?= htmlspecialchars('私は' .$msg . '歳です', ENT_QUOTES, 'UTF-8') ?></p>
+        <?php if ($age) : ?>
+            <p><?= htmlspecialchars('私は' . $age . '歳です', ENT_QUOTES, 'UTF-8') ?></p>
         <?php endif; ?>
     </form>
 

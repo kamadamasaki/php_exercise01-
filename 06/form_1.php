@@ -1,9 +1,9 @@
 <?php
 
-$msg = '';
+$age = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $msg = $_POST['age'];
+    $age = $_POST['age'];
 }
 ?>
 
@@ -27,8 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <input type="submit" value="送信">
             </div>
         </div>
-        <?php if ($msg) : ?>
-            <p><?= htmlspecialchars('私は' .$msg . '歳です', ENT_QUOTES, 'UTF-8') ?></p>
+        <?php if ($age) : ?>
+            <p><?= htmlspecialchars('私は' . $age . '歳です', ENT_QUOTES, 'UTF-8') ?></p>
         <?php endif; ?>
 
     </form>
